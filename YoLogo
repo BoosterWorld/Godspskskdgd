@@ -1,0 +1,38 @@
+-- Logo button to toggle the hacking GUI
+local logoButton = Instance.new("TextButton")
+logoButton.Parent = game.Players.LocalPlayer.PlayerGui
+logoButton.Size = UDim2.new(0, 200, 0, 200)
+logoButton.BackgroundColor3 = Color3.fromRGB(128, 0, 128)
+logoButton.Position = UDim2.new(0, 50, 0, 50)
+logoButton.Text = "Booster World"
+logoButton.TextColor3 = Color3.new(1, 1, 1)
+logoButton.TextSize = 24
+logoButton.Visible = true
+
+local hackingGUI = Instance.new("ScreenGui")
+hackingGUI.Parent = game.Players.LocalPlayer.PlayerGui
+
+local hackingFrame = Instance.new("Frame")
+hackingFrame.Parent = hackingGUI
+hackingFrame.Size = UDim2.new(0, 500, 0, 400)
+hackingFrame.Position = UDim2.new(0.5, -250, 0.5, -200)
+hackingFrame.BackgroundColor3 = Color3.fromRGB(128, 0, 128)
+hackingFrame.Visible = false
+
+-- Function to open/close hacking GUI
+logoButton.MouseButton1Click:Connect(function()
+    hackingFrame.Visible = not hackingFrame.Visible
+end)
+
+-- Scripts scrolling list
+local scriptsList = Instance.new("ScrollingFrame")
+scriptsList.Parent = hackingFrame
+scriptsList.Size = UDim2.new(0, 480, 0, 350)
+scriptsList.Position = UDim2.new(0, 10, 0, 10)
+scriptsList.BackgroundColor3 = Color3.fromRGB(128, 0, 128)
+scriptsList.ScrollBarThickness = 15
+
+-- Placeholder for scripts
+-- Copy and paste unique scripts here
+
+-- Add your unique scripts to the scriptsList
